@@ -4,19 +4,24 @@ namespace Shapes.Models
 {
     public class Circle
     {
-        public int Radius { get; set; }
+        public double Radius { get; set; }
 
-        public Circle(int lengthRadius)
+        public Circle(double lengthRadius)
         {
-          Radius = lengthRadius;
+            Radius = lengthRadius;
         }
 
-        public int GetDiameter()
+        public double GetDiameter()
         {
-          int Diameter = 2 * Radius;
-          return Diameter;
+            double Diameter = 2 * Radius;
+            return Diameter;
         }
 
-        // public int 
+
+        public double GetCircumference()
+        {
+            double Circumference = Math.Round(Math.PI * GetDiameter(), 3);
+            return Circumference;
+        }
     }
 }
